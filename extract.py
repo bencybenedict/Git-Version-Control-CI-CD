@@ -24,4 +24,5 @@ def load(data):
 if __name__ == "__main__":
     data = extract()
     data = transform(data)
+    print("Processing sales data...")
     load(data)
