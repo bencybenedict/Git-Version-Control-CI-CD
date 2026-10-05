@@ -21,7 +21,18 @@ def load(data):
         print(row)
 
 
+def validate(data):
+    valid_data = []
+
+    for row in data:
+        if row["product"] and row["quantity"] and row["price"]:
+            valid_data.append(row)
+
+    return valid_data
+
+
 if __name__ == "__main__":
     data = extract()
     data = transform(data)
+    data = validate(data)
     load(data)
