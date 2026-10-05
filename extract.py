@@ -1,8 +1,23 @@
 import csv
+
+
 def extract():
-    with open("Sales.csv", "r") as file:
+    with open("sales.csv", "r") as file:
         data = list(csv.DictReader(file))
 
-    print("Number of rows:", len(data))
+    return data
+
+
+def transform(data):
+    for row in data:
+        row["quantity"] = int(row["quantity"])
+        row["price"] = float(row["price"])
+
+    return data
+
+
 if __name__ == "__main__":
-    extract()
+    data = extract()
+    data = transform(data)
+
+    print("Number of rows:", len(data))
