@@ -16,8 +16,12 @@ def transform(data):
     return data
 
 
+def load(data):
+    for row in data:
+        print(row)
+
+
 if __name__ == "__main__":
     data = extract()
     data = transform(data)
-
-    print("Number of rows:", len(data))
+    load(data)
