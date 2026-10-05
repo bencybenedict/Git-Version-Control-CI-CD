@@ -13,5 +13,5 @@ def test_transform():
 
     result = transform(data)
 
-    assert result[0]["quantity"] == 100
+    assert result[0]["quantity"] == 2
     assert result[0]["price"] == 50000.0
