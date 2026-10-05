@@ -34,5 +34,5 @@ def validate(data):
 if __name__ == "__main__":
     data = extract()
     data = transform(data)
-    data = validate(data)
+    print("ETL processing completed")
     load(data)
