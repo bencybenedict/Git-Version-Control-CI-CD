@@ -10,7 +10,6 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,4 +25,4 @@ jobs:
         run: pip install pytest
 
       - name: Run tests
-        run: pytest
+        run: python -m pytest
